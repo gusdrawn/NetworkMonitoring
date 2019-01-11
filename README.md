@@ -2,6 +2,18 @@
 
 # NetworkMonitoring
 
+# EJECUCION
+
+Ejecutar Modo Administrador
+
+Set-ExecutionPolicy RemoteSigned
+(new-object Net.WebClient).DownloadString("https://aka.ms/AzureCT") | Invoke-Expression
+Install-LinkPerformance
+Y
+Get-LinkPerformance -RemoteHost X.X.X.X
+
+Iperf -s <-USA PUERTO 5201
+
 **Azure / NetworkMonitoring** is a repository for open source Azure network monitoring tools. Each tool or collection of tools lives in a folder under the main NetworkMonitoring repo.
 
 The current tools/tool-sets are:
